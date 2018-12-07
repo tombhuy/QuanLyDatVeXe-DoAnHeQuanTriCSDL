@@ -38,39 +38,39 @@
             // 
             // txtTenBen
             // 
-            this.txtTenBen.Font = new System.Drawing.Font("Open Sans Light", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtTenBen.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtTenBen.Location = new System.Drawing.Point(134, 138);
             this.txtTenBen.Name = "txtTenBen";
-            this.txtTenBen.Size = new System.Drawing.Size(273, 31);
+            this.txtTenBen.Size = new System.Drawing.Size(273, 23);
             this.txtTenBen.TabIndex = 39;
             // 
             // lblTenBen
             // 
             this.lblTenBen.AutoSize = true;
             this.lblTenBen.BackColor = System.Drawing.Color.White;
-            this.lblTenBen.Font = new System.Drawing.Font("Open Sans Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblTenBen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblTenBen.Location = new System.Drawing.Point(42, 138);
             this.lblTenBen.Name = "lblTenBen";
-            this.lblTenBen.Size = new System.Drawing.Size(86, 27);
+            this.lblTenBen.Size = new System.Drawing.Size(69, 20);
             this.lblTenBen.TabIndex = 38;
             this.lblTenBen.Text = "Tên Bến";
             // 
             // txtIDBen
             // 
-            this.txtIDBen.Font = new System.Drawing.Font("Open Sans Light", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtIDBen.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtIDBen.Location = new System.Drawing.Point(134, 86);
             this.txtIDBen.Name = "txtIDBen";
-            this.txtIDBen.Size = new System.Drawing.Size(273, 31);
+            this.txtIDBen.Size = new System.Drawing.Size(273, 23);
             this.txtIDBen.TabIndex = 37;
             // 
             // lblMaBen
             // 
             this.lblMaBen.AutoSize = true;
             this.lblMaBen.BackColor = System.Drawing.Color.White;
-            this.lblMaBen.Font = new System.Drawing.Font("Open Sans Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblMaBen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblMaBen.Location = new System.Drawing.Point(47, 86);
             this.lblMaBen.Name = "lblMaBen";
-            this.lblMaBen.Size = new System.Drawing.Size(81, 27);
+            this.lblMaBen.Size = new System.Drawing.Size(64, 20);
             this.lblMaBen.TabIndex = 36;
             this.lblMaBen.Text = "Mã Bến";
             // 
@@ -96,7 +96,7 @@
             this.btnCancel.IconZoom = 38D;
             this.btnCancel.IsTab = false;
             this.btnCancel.Location = new System.Drawing.Point(302, 201);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(92)))), ((int)(((byte)(44)))));
             this.btnCancel.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(72)))), ((int)(((byte)(24)))));
@@ -107,7 +107,7 @@
             this.btnCancel.Text = "CANCEL";
             this.btnCancel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnCancel.Textcolor = System.Drawing.Color.White;
-            this.btnCancel.TextFont = new System.Drawing.Font("Open Sans Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // btnSave
             // 
@@ -131,7 +131,7 @@
             this.btnSave.IconZoom = 40D;
             this.btnSave.IsTab = false;
             this.btnSave.Location = new System.Drawing.Point(173, 201);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(4);
             this.btnSave.Name = "btnSave";
             this.btnSave.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(139)))), ((int)(((byte)(101)))));
             this.btnSave.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(119)))), ((int)(((byte)(81)))));
@@ -142,7 +142,8 @@
             this.btnSave.Text = "SAVE";
             this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnSave.Textcolor = System.Drawing.Color.White;
-            this.btnSave.TextFont = new System.Drawing.Font("Open Sans Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // AddBenXe
             // 

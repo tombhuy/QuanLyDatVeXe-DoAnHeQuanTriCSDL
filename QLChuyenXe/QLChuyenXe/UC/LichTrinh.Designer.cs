@@ -35,12 +35,18 @@
             this.thembenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.chToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.xóaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.xóaToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureReload1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtBenTuyen = new System.Windows.Forms.TextBox();
             this.lbTuyen = new System.Windows.Forms.ListBox();
+            this.cmsTuyenDuong = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.lbBen = new System.Windows.Forms.ListBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -48,40 +54,34 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.cbLichChay = new System.Windows.Forms.ComboBox();
             this.dgvLichChay = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.cmsChuyenXe = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem7 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem8 = new System.Windows.Forms.ToolStripMenuItem();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.xóaToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
-            this.cmsTuyenDuong = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
-            this.cmsChuyenXe = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem7 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem8 = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsBenXe.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureReload1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.cmsTuyenDuong.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLichChay)).BeginInit();
-            this.cmsTuyenDuong.SuspendLayout();
             this.cmsChuyenXe.SuspendLayout();
             this.SuspendLayout();
             // 
             // cmsBenXe
             // 
-            this.cmsBenXe.Font = new System.Drawing.Font("Open Sans Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmsBenXe.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmsBenXe.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.cmsBenXe.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.thembenToolStripMenuItem,
@@ -89,26 +89,33 @@
             this.xóaToolStripMenuItem,
             this.xóaToolStripMenuItem3});
             this.cmsBenXe.Name = "cmsBenXe";
-            this.cmsBenXe.Size = new System.Drawing.Size(158, 100);
+            this.cmsBenXe.Size = new System.Drawing.Size(153, 114);
             // 
             // thembenToolStripMenuItem
             // 
             this.thembenToolStripMenuItem.Name = "thembenToolStripMenuItem";
-            this.thembenToolStripMenuItem.Size = new System.Drawing.Size(157, 24);
+            this.thembenToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.thembenToolStripMenuItem.Text = "Refresh";
             this.thembenToolStripMenuItem.Click += new System.EventHandler(this.thembenToolStripMenuItem_Click);
             // 
             // chToolStripMenuItem
             // 
             this.chToolStripMenuItem.Name = "chToolStripMenuItem";
-            this.chToolStripMenuItem.Size = new System.Drawing.Size(157, 24);
+            this.chToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.chToolStripMenuItem.Text = "Thêm mới...";
+            this.chToolStripMenuItem.Click += new System.EventHandler(this.chToolStripMenuItem_Click);
             // 
             // xóaToolStripMenuItem
             // 
             this.xóaToolStripMenuItem.Name = "xóaToolStripMenuItem";
-            this.xóaToolStripMenuItem.Size = new System.Drawing.Size(157, 24);
+            this.xóaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.xóaToolStripMenuItem.Text = "Chỉnh sửa...";
+            // 
+            // xóaToolStripMenuItem3
+            // 
+            this.xóaToolStripMenuItem3.Name = "xóaToolStripMenuItem3";
+            this.xóaToolStripMenuItem3.Size = new System.Drawing.Size(152, 22);
+            this.xóaToolStripMenuItem3.Text = "Xóa...";
             // 
             // panel2
             // 
@@ -152,10 +159,10 @@
             // txtBenTuyen
             // 
             this.txtBenTuyen.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtBenTuyen.Font = new System.Drawing.Font("Open Sans Light", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBenTuyen.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBenTuyen.Location = new System.Drawing.Point(50, 10);
             this.txtBenTuyen.Name = "txtBenTuyen";
-            this.txtBenTuyen.Size = new System.Drawing.Size(250, 25);
+            this.txtBenTuyen.Size = new System.Drawing.Size(250, 17);
             this.txtBenTuyen.TabIndex = 2;
             // 
             // lbTuyen
@@ -164,11 +171,46 @@
             this.lbTuyen.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lbTuyen.ContextMenuStrip = this.cmsTuyenDuong;
             this.lbTuyen.FormattingEnabled = true;
-            this.lbTuyen.ItemHeight = 16;
             this.lbTuyen.Location = new System.Drawing.Point(254, 145);
             this.lbTuyen.Name = "lbTuyen";
-            this.lbTuyen.Size = new System.Drawing.Size(279, 432);
+            this.lbTuyen.Size = new System.Drawing.Size(279, 429);
             this.lbTuyen.TabIndex = 6;
+            // 
+            // cmsTuyenDuong
+            // 
+            this.cmsTuyenDuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmsTuyenDuong.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.cmsTuyenDuong.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1,
+            this.toolStripMenuItem2,
+            this.toolStripMenuItem3,
+            this.toolStripMenuItem4});
+            this.cmsTuyenDuong.Name = "cmsBenXe";
+            this.cmsTuyenDuong.Size = new System.Drawing.Size(140, 92);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(139, 22);
+            this.toolStripMenuItem1.Text = "Refresh";
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(139, 22);
+            this.toolStripMenuItem2.Text = "Thêm mới...";
+            // 
+            // toolStripMenuItem3
+            // 
+            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(139, 22);
+            this.toolStripMenuItem3.Text = "Chỉnh sửa...";
+            // 
+            // toolStripMenuItem4
+            // 
+            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(139, 22);
+            this.toolStripMenuItem4.Text = "Xóa...";
             // 
             // lbBen
             // 
@@ -176,10 +218,9 @@
             this.lbBen.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lbBen.ContextMenuStrip = this.cmsBenXe;
             this.lbBen.FormattingEnabled = true;
-            this.lbBen.ItemHeight = 16;
             this.lbBen.Location = new System.Drawing.Point(43, 145);
             this.lbBen.Name = "lbBen";
-            this.lbBen.Size = new System.Drawing.Size(180, 432);
+            this.lbBen.Size = new System.Drawing.Size(180, 429);
             this.lbBen.TabIndex = 5;
             // 
             // panel4
@@ -223,11 +264,11 @@
             // 
             // cbLichChay
             // 
-            this.cbLichChay.Font = new System.Drawing.Font("Open Sans Light", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbLichChay.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbLichChay.FormattingEnabled = true;
             this.cbLichChay.Location = new System.Drawing.Point(50, 7);
             this.cbLichChay.Name = "cbLichChay";
-            this.cbLichChay.Size = new System.Drawing.Size(302, 31);
+            this.cbLichChay.Size = new System.Drawing.Size(302, 25);
             this.cbLichChay.TabIndex = 1;
             // 
             // dgvLichChay
@@ -239,7 +280,7 @@
             this.dgvLichChay.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Open Sans Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.SeaGreen;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -257,6 +298,42 @@
             this.dgvLichChay.RowTemplate.Height = 24;
             this.dgvLichChay.Size = new System.Drawing.Size(582, 432);
             this.dgvLichChay.TabIndex = 9;
+            // 
+            // cmsChuyenXe
+            // 
+            this.cmsChuyenXe.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmsChuyenXe.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.cmsChuyenXe.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem5,
+            this.toolStripMenuItem6,
+            this.toolStripMenuItem7,
+            this.toolStripMenuItem8});
+            this.cmsChuyenXe.Name = "cmsBenXe";
+            this.cmsChuyenXe.Size = new System.Drawing.Size(140, 92);
+            // 
+            // toolStripMenuItem5
+            // 
+            this.toolStripMenuItem5.Name = "toolStripMenuItem5";
+            this.toolStripMenuItem5.Size = new System.Drawing.Size(139, 22);
+            this.toolStripMenuItem5.Text = "Refresh";
+            // 
+            // toolStripMenuItem6
+            // 
+            this.toolStripMenuItem6.Name = "toolStripMenuItem6";
+            this.toolStripMenuItem6.Size = new System.Drawing.Size(139, 22);
+            this.toolStripMenuItem6.Text = "Thêm mới...";
+            // 
+            // toolStripMenuItem7
+            // 
+            this.toolStripMenuItem7.Name = "toolStripMenuItem7";
+            this.toolStripMenuItem7.Size = new System.Drawing.Size(139, 22);
+            this.toolStripMenuItem7.Text = "Chỉnh sửa...";
+            // 
+            // toolStripMenuItem8
+            // 
+            this.toolStripMenuItem8.Name = "toolStripMenuItem8";
+            this.toolStripMenuItem8.Size = new System.Drawing.Size(139, 22);
+            this.toolStripMenuItem8.Text = "Xóa...";
             // 
             // panel5
             // 
@@ -287,10 +364,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Open Sans Light", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label1.Location = new System.Drawing.Point(38, 107);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 30);
+            this.label1.Size = new System.Drawing.Size(42, 22);
             this.label1.TabIndex = 15;
             this.label1.Text = "Bến";
             // 
@@ -298,10 +375,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Open Sans Light", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label2.Location = new System.Drawing.Point(249, 107);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(147, 30);
+            this.label2.Size = new System.Drawing.Size(119, 22);
             this.label2.TabIndex = 16;
             this.label2.Text = "Tuyến Đường";
             // 
@@ -309,90 +386,12 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Open Sans Light", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label3.Location = new System.Drawing.Point(591, 107);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(107, 30);
+            this.label3.Size = new System.Drawing.Size(90, 22);
             this.label3.TabIndex = 17;
             this.label3.Text = "Lịch Chạy";
-            // 
-            // xóaToolStripMenuItem3
-            // 
-            this.xóaToolStripMenuItem3.Name = "xóaToolStripMenuItem3";
-            this.xóaToolStripMenuItem3.Size = new System.Drawing.Size(157, 24);
-            this.xóaToolStripMenuItem3.Text = "Xóa...";
-            // 
-            // cmsTuyenDuong
-            // 
-            this.cmsTuyenDuong.Font = new System.Drawing.Font("Open Sans Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmsTuyenDuong.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.cmsTuyenDuong.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem1,
-            this.toolStripMenuItem2,
-            this.toolStripMenuItem3,
-            this.toolStripMenuItem4});
-            this.cmsTuyenDuong.Name = "cmsBenXe";
-            this.cmsTuyenDuong.Size = new System.Drawing.Size(158, 100);
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(157, 24);
-            this.toolStripMenuItem1.Text = "Refresh";
-            // 
-            // toolStripMenuItem2
-            // 
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(157, 24);
-            this.toolStripMenuItem2.Text = "Thêm mới...";
-            // 
-            // toolStripMenuItem3
-            // 
-            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(157, 24);
-            this.toolStripMenuItem3.Text = "Chỉnh sửa...";
-            // 
-            // toolStripMenuItem4
-            // 
-            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(157, 24);
-            this.toolStripMenuItem4.Text = "Xóa...";
-            // 
-            // cmsChuyenXe
-            // 
-            this.cmsChuyenXe.Font = new System.Drawing.Font("Open Sans Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmsChuyenXe.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.cmsChuyenXe.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem5,
-            this.toolStripMenuItem6,
-            this.toolStripMenuItem7,
-            this.toolStripMenuItem8});
-            this.cmsChuyenXe.Name = "cmsBenXe";
-            this.cmsChuyenXe.Size = new System.Drawing.Size(158, 100);
-            // 
-            // toolStripMenuItem5
-            // 
-            this.toolStripMenuItem5.Name = "toolStripMenuItem5";
-            this.toolStripMenuItem5.Size = new System.Drawing.Size(157, 24);
-            this.toolStripMenuItem5.Text = "Refresh";
-            // 
-            // toolStripMenuItem6
-            // 
-            this.toolStripMenuItem6.Name = "toolStripMenuItem6";
-            this.toolStripMenuItem6.Size = new System.Drawing.Size(157, 24);
-            this.toolStripMenuItem6.Text = "Thêm mới...";
-            // 
-            // toolStripMenuItem7
-            // 
-            this.toolStripMenuItem7.Name = "toolStripMenuItem7";
-            this.toolStripMenuItem7.Size = new System.Drawing.Size(157, 24);
-            this.toolStripMenuItem7.Text = "Chỉnh sửa...";
-            // 
-            // toolStripMenuItem8
-            // 
-            this.toolStripMenuItem8.Name = "toolStripMenuItem8";
-            this.toolStripMenuItem8.Size = new System.Drawing.Size(157, 24);
-            this.toolStripMenuItem8.Text = "Xóa...";
             // 
             // LichTrinh
             // 
@@ -418,12 +417,12 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.cmsTuyenDuong.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLichChay)).EndInit();
-            this.cmsTuyenDuong.ResumeLayout(false);
             this.cmsChuyenXe.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

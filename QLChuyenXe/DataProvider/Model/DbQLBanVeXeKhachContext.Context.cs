@@ -12,6 +12,8 @@ namespace DataProvider.Model
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Entity.Core.Objects;
+    using System.Linq;
     
     public partial class DbQLBanVeXeKhachContext : DbContext
     {
@@ -37,5 +39,18 @@ namespace DataProvider.Model
         public virtual DbSet<SODIENTHOAI> SODIENTHOAIs { get; set; }
         public virtual DbSet<TUYENDUONG> TUYENDUONGs { get; set; }
         public virtual DbSet<XE> XEs { get; set; }
+    
+        public virtual ObjectResult<Nullable<bool>> sp_ThemMoiBen(string maBen, string tenBen)
+        {
+            var maBenParameter = maBen != null ?
+                new ObjectParameter("MaBen", maBen) :
+                new ObjectParameter("MaBen", typeof(string));
+    
+            var tenBenParameter = tenBen != null ?
+                new ObjectParameter("TenBen", tenBen) :
+                new ObjectParameter("TenBen", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<bool>>("sp_ThemMoiBen", maBenParameter, tenBenParameter);
+        }
     }
 }

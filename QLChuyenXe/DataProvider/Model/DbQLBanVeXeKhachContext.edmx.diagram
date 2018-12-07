@@ -7,7 +7,7 @@
       <Diagram DiagramId="931ead6ea23240cc9d7c66cd279d27e9" Name="Diagram1">
         <EntityTypeShape EntityType="QLBanVeXeKhachModel.BEN" Width="1.5" PointX="0.75" PointY="5.625" IsExpanded="true" />
         <EntityTypeShape EntityType="QLBanVeXeKhachModel.CHUYENXE" Width="1.5" PointX="5.25" PointY="3.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="QLBanVeXeKhachModel.CHUYENXETHUCTE" Width="1.5" PointX="12.5" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLBanVeXeKhachModel.CHUYENXETHUCTE" Width="1.5" PointX="12.5" PointY="5.125" IsExpanded="true" />
         <EntityTypeShape EntityType="QLBanVeXeKhachModel.DATVE" Width="1.5" PointX="14.75" PointY="5" IsExpanded="true" />
         <EntityTypeShape EntityType="QLBanVeXeKhachModel.DATVE_SOGHE" Width="1.5" PointX="17" PointY="5.75" IsExpanded="true" />
         <EntityTypeShape EntityType="QLBanVeXeKhachModel.KhachHang" Width="1.5" PointX="12.5" PointY="1.375" IsExpanded="true" />
