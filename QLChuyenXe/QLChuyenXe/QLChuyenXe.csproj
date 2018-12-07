@@ -271,10 +271,6 @@
       <Project>{971b4094-30c0-4ec3-ac83-1c6c67857b41}</Project>
       <Name>BusinessLogic</Name>
     </ProjectReference>
-    <ProjectReference Include="..\DataProvider\DataProvider.csproj">
-      <Project>{97e70f6e-788c-4b9b-b5c8-1e45004b7383}</Project>
-      <Name>DataProvider</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
