@@ -19,14 +19,30 @@ namespace QLChuyenXe
             
 
         }
+        public int mode = 0;
+        public string _diemKhoiHanh = "";
+        public string _diemDen = "";
+        public int _idChuyenXe = 0;
+        public DateTime _gioKhoiHanh;
 
-       
 
         private void formDatVe_Load(object sender, EventArgs e)
         {
             tabThongTin.SelectedTab = tabChonTuyen;
             DisableTabPage();
-            
+            if(mode==1)
+            {
+                LoadData();
+            }
+
+        }
+
+        void LoadData()
+        {
+            cbDiemKhoiHanh.Text = _diemKhoiHanh;
+            cbDiemDen.Text = _diemDen;
+            cbDiemKhoiHanh.Enabled = false;
+            cbDiemDen.Enabled = false;
         }
 
         void DisableTabPage()
@@ -40,7 +56,7 @@ namespace QLChuyenXe
 
         private void btnTiepTuc_Click(object sender, EventArgs e)
         {
-            (tabThongTin.TabPages[1] as TabPage).Enabled = false;
+            (tabThongTin.TabPages[1] as TabPage).Enabled = true;
             tabThongTin.SelectedTab = tabChonGhe;
             
         }
@@ -55,7 +71,7 @@ namespace QLChuyenXe
 
         private void btnTiepTuctab2_Click(object sender, EventArgs e)
         {
-            (tabThongTin.TabPages[2] as TabPage).Enabled = false;
+            (tabThongTin.TabPages[2] as TabPage).Enabled = true;
             tabThongTin.SelectedTab = tabThongTinKhachHang;
         }
     }

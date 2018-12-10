@@ -52,5 +52,60 @@ namespace DataProvider.Model
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<bool>>("sp_ThemMoiBen", maBenParameter, tenBenParameter);
         }
+    
+        public virtual ObjectResult<BEN> sp_SelectAllBenXe()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<BEN>("sp_SelectAllBenXe");
+        }
+    
+        public virtual ObjectResult<BEN> sp_SelectAllBenXe(MergeOption mergeOption)
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<BEN>("sp_SelectAllBenXe", mergeOption);
+        }
+    
+        public virtual ObjectResult<TUYENDUONG> sp_GetTuyenDuongByDiemKhoiHanh(string iDDiemKhoiHanh)
+        {
+            var iDDiemKhoiHanhParameter = iDDiemKhoiHanh != null ?
+                new ObjectParameter("IDDiemKhoiHanh", iDDiemKhoiHanh) :
+                new ObjectParameter("IDDiemKhoiHanh", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<TUYENDUONG>("sp_GetTuyenDuongByDiemKhoiHanh", iDDiemKhoiHanhParameter);
+        }
+    
+        public virtual ObjectResult<TUYENDUONG> sp_GetTuyenDuongByDiemKhoiHanh(string iDDiemKhoiHanh, MergeOption mergeOption)
+        {
+            var iDDiemKhoiHanhParameter = iDDiemKhoiHanh != null ?
+                new ObjectParameter("IDDiemKhoiHanh", iDDiemKhoiHanh) :
+                new ObjectParameter("IDDiemKhoiHanh", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<TUYENDUONG>("sp_GetTuyenDuongByDiemKhoiHanh", mergeOption, iDDiemKhoiHanhParameter);
+        }
+    
+        public virtual ObjectResult<sp_GetTuyenDuongByDiemKhoiHanh2_Result> sp_GetTuyenDuongByDiemKhoiHanh2(string iDDiemKhoiHanh)
+        {
+            var iDDiemKhoiHanhParameter = iDDiemKhoiHanh != null ?
+                new ObjectParameter("IDDiemKhoiHanh", iDDiemKhoiHanh) :
+                new ObjectParameter("IDDiemKhoiHanh", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_GetTuyenDuongByDiemKhoiHanh2_Result>("sp_GetTuyenDuongByDiemKhoiHanh2", iDDiemKhoiHanhParameter);
+        }
+    
+        public virtual ObjectResult<CHUYENXE> sp_GetChuyenXeByTuyenDuong(Nullable<int> iDTuyenDuong)
+        {
+            var iDTuyenDuongParameter = iDTuyenDuong.HasValue ?
+                new ObjectParameter("IDTuyenDuong", iDTuyenDuong) :
+                new ObjectParameter("IDTuyenDuong", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<CHUYENXE>("sp_GetChuyenXeByTuyenDuong", iDTuyenDuongParameter);
+        }
+    
+        public virtual ObjectResult<CHUYENXE> sp_GetChuyenXeByTuyenDuong(Nullable<int> iDTuyenDuong, MergeOption mergeOption)
+        {
+            var iDTuyenDuongParameter = iDTuyenDuong.HasValue ?
+                new ObjectParameter("IDTuyenDuong", iDTuyenDuong) :
+                new ObjectParameter("IDTuyenDuong", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<CHUYENXE>("sp_GetChuyenXeByTuyenDuong", mergeOption, iDTuyenDuongParameter);
+        }
     }
 }

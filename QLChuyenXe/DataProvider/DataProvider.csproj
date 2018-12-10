@@ -96,6 +96,9 @@
     <Compile Include="Model\SODIENTHOAI.cs">
       <DependentUpon>DbQLBanVeXeKhachContext.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\sp_GetTuyenDuongByDiemKhoiHanh2_Result.cs">
+      <DependentUpon>DbQLBanVeXeKhachContext.tt</DependentUpon>
+    </Compile>
     <Compile Include="Model\TUYENDUONG.cs">
       <DependentUpon>DbQLBanVeXeKhachContext.tt</DependentUpon>
     </Compile>

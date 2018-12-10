@@ -306,6 +306,16 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Function Name="sp_GetChuyenXeByTuyenDuong" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IDTuyenDuong" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_GetTuyenDuongByDiemKhoiHanh" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IDDiemKhoiHanh" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="sp_GetTuyenDuongByDiemKhoiHanh2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IDDiemKhoiHanh" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="sp_SelectAllBenXe" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="sp_ThemMoiBen" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="MaBen" Type="varchar" Mode="In" />
           <Parameter Name="TenBen" Type="nvarchar" Mode="In" />
@@ -763,7 +773,21 @@
             <Parameter Name="MaBen" Mode="In" Type="String" />
             <Parameter Name="TenBen" Mode="In" Type="String" />
           </FunctionImport>
+          <FunctionImport Name="sp_SelectAllBenXe" EntitySet="BENs" ReturnType="Collection(QLBanVeXeKhachModel.BEN)" />
+          <FunctionImport Name="sp_GetTuyenDuongByDiemKhoiHanh" EntitySet="TUYENDUONGs" ReturnType="Collection(QLBanVeXeKhachModel.TUYENDUONG)">
+          <Parameter Name="IDDiemKhoiHanh" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_GetTuyenDuongByDiemKhoiHanh2" ReturnType="Collection(QLBanVeXeKhachModel.sp_GetTuyenDuongByDiemKhoiHanh2_Result)">
+          <Parameter Name="IDDiemKhoiHanh" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_GetChuyenXeByTuyenDuong" EntitySet="CHUYENXEs" ReturnType="Collection(QLBanVeXeKhachModel.CHUYENXE)">
+            <Parameter Name="IDTuyenDuong" Mode="In" Type="Int32" />
+          </FunctionImport>
         </EntityContainer>
+        <ComplexType Name="sp_GetTuyenDuongByDiemKhoiHanh2_Result">
+          <Property Type="Int32" Name="IDTuyenDuong" Nullable="false" />
+          <Property Type="String" Name="TENDIEMDEN" Nullable="true" MaxLength="50" />
+        </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -901,6 +925,18 @@
             </EndProperty>
           </AssociationSetMapping>
           <FunctionImportMapping FunctionImportName="sp_ThemMoiBen" FunctionName="QLBanVeXeKhachModel.Store.sp_ThemMoiBen" />
+          <FunctionImportMapping FunctionImportName="sp_SelectAllBenXe" FunctionName="QLBanVeXeKhachModel.Store.sp_SelectAllBenXe">
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_GetTuyenDuongByDiemKhoiHanh" FunctionName="QLBanVeXeKhachModel.Store.sp_GetTuyenDuongByDiemKhoiHanh" />
+          <FunctionImportMapping FunctionImportName="sp_GetTuyenDuongByDiemKhoiHanh2" FunctionName="QLBanVeXeKhachModel.Store.sp_GetTuyenDuongByDiemKhoiHanh2">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="QLBanVeXeKhachModel.sp_GetTuyenDuongByDiemKhoiHanh2_Result">
+                <ScalarProperty Name="IDTuyenDuong" ColumnName="IDTuyenDuong" />
+                <ScalarProperty Name="TENDIEMDEN" ColumnName="TENDIEMDEN" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_GetChuyenXeByTuyenDuong" FunctionName="QLBanVeXeKhachModel.Store.sp_GetChuyenXeByTuyenDuong" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
